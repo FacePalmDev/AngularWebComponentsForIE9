@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Elements - Framework Poll</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <p>
+        <login-view></login-view>
+    </p>
+
+    <div class="container">
+
+        <p>
+            This is an Angular 6 Component running in a vanilla HTML page without the Angular Framework running.
+            This means we can now use Angular6 components outside of an Angular project!
+        </p>
+        <p>
+            I've also added polyfills and custom tweaks to make this work in IE9!</p>
+        <p>
+            Try putting in a password less than 3 chars:
+        </p>
+    </div>
+
+    <!-- just a framework... no angular 2 app! -->
+    <script type="text/javascript" src="runtime.js"></script>
+    <script type="text/javascript" src="polyfills.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

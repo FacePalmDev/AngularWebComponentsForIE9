@@ -2,11 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-
 import { AppComponent } from './app.component';
-import { FrameworkPollComponent } from './framework-poll/framework-poll.component';
+
+import { LoginComponent } from './login/login.component';
 
 const config = {
   apiKey: '[INSERT YOUR FIREBASE SETTINGS HERE]',
@@ -20,16 +18,14 @@ const config = {
 @NgModule({
   declarations: [
     AppComponent,
-    FrameworkPollComponent
+    LoginComponent
   ],
-  imports: [
+imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(config),
-    AngularFirestoreModule
   ],
   providers: [],
   entryComponents: [
-    FrameworkPollComponent
+   LoginComponent
   ]
 })
 export class AppModule {
@@ -37,8 +33,9 @@ export class AppModule {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {
-    const el = createCustomElement(FrameworkPollComponent, {injector: this.injector});
-    customElements.define('framework-poll', el);
+
+    const loginElement = createCustomElement(LoginComponent, {injector: this.injector});
+    customElements.define('login-view', loginElement);
   }
 
 }

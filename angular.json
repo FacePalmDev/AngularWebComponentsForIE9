@@ -26,6 +26,9 @@
               "src/styles.css"
             ],
             "scripts": [
+              "src/scripts/polyfills/array.from.js",
+              "src/scripts/polyfills/array.fill.js",
+              "node_modules/@webcomponents/custom-elements/src/native-shim.js",
               {
                 "input": "node_modules/document-register-element/build/document-register-element.js"
               }
